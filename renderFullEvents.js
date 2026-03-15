@@ -11,10 +11,10 @@ const renderEvents = ( events ) =>{
 
     let eventsHtml = "";
     for(let event of events){
-      eventsHtml = eventsHtml + `<div class ="event">
+      eventsHtml = eventsHtml + `<a href="event-${event.id}.html" class ="event">
       <img src="${event.image}"/>
       <div  class="name">${event.name}</div>
-      </div>`
+      </a>`
     }
   
   return `<div class="grid">${eventsHtml}</div>`;
@@ -30,4 +30,21 @@ export const render = (events) => {
           ${renderEvents(events)}
         </body>
       </html>`;
+};
+
+
+export const renderEachEvent = (event) => {
+  return `
+    <html>
+      ${header(event.name)}
+      <body>
+        <a href="index.html">Volver</a>
+        <h1>${event.name}</h1>
+        <img src="${event.image}" />
+        <p>Fecha: ${event.date}</p>
+        <p>Lugar: ${event.location}</p>
+        <p>Categoría: ${event.classification}</p>
+        <a href="${event.url}" target="_blank">Comprar entradas</a>
+      </body>
+    </html>`;
 };
