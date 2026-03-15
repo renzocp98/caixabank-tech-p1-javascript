@@ -1,5 +1,38 @@
+.html {
+    color: #000;
+
+}
+
+body {
+    padding: 1rem;
+    margin: 5px;
+    background-color: rgb(88, 179, 202);
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
+}
+
+.event {        
+  max-width: 100px;    
+  border: 1px solid #810707;
+  border-radius: 8px;
+  overflow: hidden;  
+  background-color: #1b8621; 
+}
+
+.event img {
+  width: 100%;         
+  aspect-ratio: 16/9;  
+  object-fit: cover;   
+}
+
+.event .name {
+  font-size: 7px;      
+  font-weight: bold;    
+  color: #000000;  
+  text-align: center;
+  padding: auto;        
 }
