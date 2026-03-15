@@ -1,11 +1,13 @@
 export class Events{
-    constructor(name, url, location, sale, date, classification){
+    constructor(id,name, url, location, sale, date, classification, image){
+        this.id = id,
         this.name = name;
         this.url = url;
         this.location = location;
         this.sale = sale;
         this.date = date;
         this.classification = classification;
+        this.image = image;
     }
 }
 
@@ -15,18 +17,17 @@ export const loadEvents = async (n) => {
 
     const events = data._embedded.events.map(event =>
         new Events(
+            event.id,
             event.name,
             event.url,
             event._embedded.venues[0].name,
             event.sales.public.startDateTime,
             event.dates.start.localDate,
-            event.classifications[0].segment.name
+            event.classifications[0].segment.name,
+            event.images[0].url
         )
     );
 
     return events;
 
 };
-
-const events = await loadEvents(2);
-console.log(events);
