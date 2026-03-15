@@ -12,7 +12,7 @@ export class Events{
 }
 
 export const loadEvents = async (n) => {
-    const response = await fetch('https://app.ticketmaster.com/discovery/v2/events.json?apikey=IY15m5Po8rivnx1OIfoiX8lYZcYyTgVY&size=2');
+    const response = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?apikey=IY15m5Po8rivnx1OIfoiX8lYZcYyTgVY&size=${n}`);
     const data = await response.json();
 
     const events = data._embedded.events.map(event =>
