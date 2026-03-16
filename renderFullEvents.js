@@ -1,6 +1,6 @@
 const header = (title) => `
 <head>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@ const renderEvents = ( events ) =>{
 
     let eventsHtml = "";
     for(let event of events){
-      eventsHtml = eventsHtml + `<a href="event-${event.id}.html" class ="event">
+      eventsHtml = eventsHtml + `<a href="eventos/event-${event.id}.html" class ="event">
       <img src="${event.image}"/>
       <div  class="name">${event.name}</div>
       </a>`
@@ -39,7 +39,7 @@ export const renderEachEvent = (event) => {
     <html>
       ${header(event.name)}
       <body>
-      <a href="index.html" class="back">Volver</a>
+      <a href="../index.html" class="back">Volver</a>
         <div class="detail">
           <h1>${event.name}</h1>
           <img src="${event.image}" />
