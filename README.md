@@ -20,3 +20,10 @@ Para hacer esta práctica hay que:
 - Al finalizar, se debe descargar un ZIP y entregar en el Campus Online de UPC School (habrá una tarea para ello).
 
 **Muy importante**: la solución debe sustituir el código original (no debe quedar rastro, ni nombres, ni nada de nada). Si bien el ejemplo puede contener partes reaprovechables, se recomienda empezar _desde cero_ (ya que eso produce un aprendizaje de mucha más profundidad).
+
+
+
+RESULTADO FINAL
+
+<img width="1900" height="901" alt="image" src="https://github.com/user-attachments/assets/5d071848-85d7-4973-b6e1-3402cfc2fa39" />
+<img width="1915" height="880" alt="image" src="https://github.com/user-attachments/assets/ea175880-0682-4c2f-b43b-8923825604ae" />
